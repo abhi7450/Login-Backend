@@ -9,7 +9,7 @@ const UserSchema = mongoose.Schema({
     match: [/.+\@.+\..+/, "Please enter a vaild email address"],
     required: [true, "Email is required"],
   },
-  password: { type: String, require: [true, "Password is required"] },
+  hashed_password: { type: String, require: [true, "Password is required"] },
   created: { type: Date, default: Date.now },
   updated: { type: Date },
 });
